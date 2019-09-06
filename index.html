@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title class="title-class">Separação e Contagem </title>
+		<link rel="icon" href="drug.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+
+	</head>
+	<body>
+
+		<header>
+			<div class="container">
+				<h2 class="titulo">Aparecida Nutrição</h2>
+			</div>
+		</header>
+		<main>
+			<section class="container">
+				<h2>Lista de Medicamentos</h2>
+				<table class="tabela">
+					<thead>
+						<tr>
+							<th>Medicamento</th>
+							<th>Quantidade(mg)</th>
+							<th>Total</th>
+							<th>Quantidade de Frascos</th>
+							
+						</tr>
+
+					</thead>
+					<tbody id="tabela-medicamentos">
+						<tr class="Medicamento-velcade" id="genuxal">
+							<td class="info-medicamento">Genuxal</td>
+							<td class="info-quantidade">1000</td>
+							<td class="total-genuxal">0</td>
+							<td class="frascos-genuxal">0</td>
+							
+						</tr>
+
+						<tr class="Medicamento-velcade" >
+							<td class="info-medicamento">Velcade</td>
+							<td class="info-quantidade">3.5</td>
+							<td class="total-velcade">0</td>
+							<td class="frascos-velcade">0</td>
+						</tr>
+
+						<tr class="Medicamento-vidaza" >
+							<td class="info-medicamento">Vidaza</td>
+							<td class="info-quantidade">100</td>
+							<td class="total-vidaza">0</td>
+							<td class="frascos-vidaza">0</td>
+						</tr>
+
+					<form name="form" id="form-principal">	
+					</tbody>
+				</table>
+
+			</section>
+		</main>
+
+		<section class="container">
+		    <h2 id="titulo-form">Adicionar novo paciente</h2>
+		    <table class="tabela-soros">
+					<thead>
+						
+<style>
+	.demo {
+		border:1px solid #C0C0C0;
+		border-collapse:collapse;
+		padding:5px;
+	}
+	.demo th {
+		border:1px solid #C0C0C0;
+		padding:5px;
+		background:#F0F0F0;
+		margin: auto;
+	}
+	.demo td {
+		border:1px solid #C0C0C0;
+		padding:5px;
+	}
+</style>
+<table class="demo">
+	
+	<thead>
+	<tr>
+		<th>Soros / Equipos</th>
+		<th>Equipo Simples</th>
+		<th>Bomba</th>
+		<th>Pvc Free + Filtro</th>
+		<th>Foto</th>
+		<th>Simples + Filtro</th>
+		<th>Total</th>
+		
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>SF 50 mL</td>
+		<td id="eqsimples">sf 50 eq. simples</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		
+		
+	</tr>
+	<tr>
+		<td>SF 100 mL</td>
+		<td id="equipoteste"> 0</td>
+		<td></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td></td>
+		</tr>
+		<tr>
+		<td>SF 250 mL</td>
+		<td>250 simples</td>
+		<td>sf 250 bomba</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td></td>
+	</tr>
+	</tr>
+	<tr>
+		<td>SF 500 mL</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SF 1000 mL</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td></td>
+		
+	</tr>
+	<tr>
+		<td>SG 250 mL</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td></td>
+		
+	</tr>
+	<tr>
+		<td>SG 500 mL</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td></td>
+		
+	</tr>
+	<tr>
+		<td>SG 1000mL</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td></td>
+		
+	</tr>
+	<tr>
+		<td>Total</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>xxxxx</td>
+
+		
+	</tr>
+
+	<tbody>
+</table>
+
+
+
+
+
+<select id="lista" >
+            <option name="Selecione" value="0">Selecione</option>
+            <option name="vidaza" value="1">Vidaza</option>
+            <option name="genuxal" value="2">genuxal</option>
+            <option name="velcde" value="3">Velcade</option>
+            
+        </select>
+<select id="lista-soros" >
+            <option name="Selecione" value="0">Selecione</option>
+            <option name="SF 50 mL" value="1">SF 50 mL</option>
+            <option name="SF 100 mL" value="2">SF 100 mL</option>
+            <option name="SF 250 mL" value="3">SF 250 mL</option>
+            <option name="SF 500 mL" value="4">SF 500 mL</option>
+            <option name="SF 1000 mL" value="5">SF 1000 mL</option>
+            <option name="SG 250 mL" value="6">SG 250 mL</option>
+            <option name="SG 500 mL" value="7">SG 500 mL</option>
+        	<option name="SG 1000 mL" value="8">SG 1000 mL</option>
+        </select>
+<select id="lista-equipos" >
+            <option name="Selecione" value="0">Selecione</option>
+            <option name="Simples"  value="1">Simples</option>
+            <option name="Bomba" value="2">Bomba</option>
+            <option name="PvcFree mL" value="3">Pvc Free + Filtro</option>
+            <option name="Foto" value="4">Foto</option>
+            <option name="Simples-Filtro" value="5">Simples + Filtro</option>
+            
+        </select>
+
+<br><br>
+
+
+
+
+		    
+		        <div class="input-div">
+		            <label for="quantidade" id="labelquantidade">Quantidade em MG</label>
+		            <input id="recebeQuantidade" name="imputQuantidade" type="number" placeholder="digite a quantidade em MG" class="campo">
+		        </div>
+		        
+
+		        <button id="but" class="print">Adicionar</button>
+		        <button id="but-imprimir" class="print" onclick="print();">Imprimir</button>
+		    
+		</section>
+
+		<script src="js/principal.js"></script>
+
+	</body>
+	</form>
+</html>
+  
