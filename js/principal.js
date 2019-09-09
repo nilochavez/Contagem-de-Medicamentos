@@ -1,95 +1,22 @@
-var titulo = document.querySelector(".titulo");
-titulo.textContent = "Separação e Contagem de Medicamentos";
 
-
-var SomaTotalVelcade = 0;
 var totalFrascosVelcade = 0;
 var totalFrascosGenuxal = 0;
 var totalFrascosVidaza = 0;
+var totalFrascosCisplatina = 0;
 
-
-
-var opcoes = document.querySelector("#lista");
-var campo = document.querySelector("#recebeQuantidade");
-var tabela = document.querySelector("#tabela-medicamentos");
-
-
+var totalCarboplatina = 0;
+var addTabela50 = 0;
+var addTabela450 = 0;
+var addTabela150 = 0;
 
 
 
 
-
-var totalVelcadeTd = document.querySelector(".total-velcade");
-var velcadeTd = document.querySelector(".frascos-velcade");
-
-
-var totalGenuxalTd = document.querySelector(".total-genuxal");
-var genuxalTd = document.querySelector(".frascos-genuxal");
-
-var totalVidazaTd = document.querySelector(".total-vidaza");
-var vidazaTd = document.querySelector(".frascos-vidaza");
-
- 
-
-
-var but = document.querySelector("#but");
 var vidaza = [];
 var genuxal = [];
 var velcade = [];
-
-
-but.addEventListener("click", function(event) {
-    event.preventDefault();});
-
-but.onclick = function(){
-
-//chama a função para validar o campo: se retorna falso ela não deixa avançar//
-if (!validaCampo()){
-	return;
-};
-adicionaSoro();
-
-validaVidaza();
-validaGenuxal();
-validaVelcade();
-
-somaFrascosVelcade();
-somaFrascosGenuxal();
-somaFrascosVidaza();
-
-
-var totalVelcade = somaFrascosVelcade();
-var totalGenuxal = somaFrascosGenuxal();
-var totalVidaza = somaFrascosVidaza();
-
-
-genuxalTd.textContent = Math.ceil(totalFrascosGenuxal);
-velcadeTd.textContent = Math.ceil(totalFrascosVelcade);
-vidazaTd.textContent = Math.ceil(totalFrascosVidaza);
-
-LimpaCampo();
-
-
-};
-
-
-function validaCampo(){
-
-if (campo.value == "") {
-
-	alert("digite a quantidade em mg");
-return false;
-}
-
-else {
-	return true;
-}
-
-};
-
-
-
-
+var carboplatina = [];
+var cisplatina = [];
 
 
 
@@ -101,66 +28,92 @@ function somaFrascosVelcade(){
  	 totalFrascosVelcade = (totalVelcade / 3.5);
 	 
 	 totalVelcadeTd.textContent = totalVelcade;
+	
  	 
 }};
 
 function somaFrascosGenuxal(){
 	var totalGenuxal = 0;
+	
 	for(var i = 0; i < genuxal.length; i++){
+ 	
  	totalGenuxal = parseFloat(totalGenuxal) + parseFloat(genuxal[i]);
- 	 
- 	 totalFrascosGenuxal = (totalGenuxal / 1000);
-	 
-	totalGenuxalTd.textContent = totalGenuxal;
- 	 
+ 	totalFrascosGenuxal = (totalGenuxal / 1000);
+ 	totalGenuxalTd.textContent = totalGenuxal;
+    
+    console.log(totalFrascosGenuxal);
 }};
 
 function somaFrascosVidaza(){
+	
 	var totalVidaza = 0;
+	
 	for(var i = 0; i < vidaza.length; i++){
- 	totalVidaza = parseFloat(totalVidaza) + parseFloat(vidaza[i]);
- 	 
- 	 totalFrascosVidaza = (totalVidaza / 100);
  	
-	 totalVidazaTd.textContent = totalVidaza;
+ 	totalVidaza = parseFloat(totalVidaza) + parseFloat(vidaza[i]);
+ 	totalFrascosVidaza = (totalVidaza / 100);
+ 	totalVidazaTd.textContent = totalVidaza;
  	 
 }};
 
 
+function somaFrascosCarboplatina(){
+	
+	for(var i = 0; i < carboplatina.length; i++){
+ 	
+ 	totalCarboplatina = parseFloat(totalCarboplatina) + parseFloat(carboplatina[i]);
+ 	totalCarboplatinaTd.textContent = totalCarboplatina; 
+ 	console.log(totalCarboplatina);
+ 	
+ if  (parseFloat(carboplatina[i]) > 400){
 
+ 		while(carboplatina[i] > 400) {
+ 		carboplatina[i] = (carboplatina[i] - 450)
+ 	 	
+ 	 	addTabela450 = addTabela450 + 1;
+ 	 	carboplatinaTd.textContent = addTabela450;
+ 	 	console.log(totalCarboplatina);
+ 	 	
+ 	 	
+}};
 
+if  (parseFloat(carboplatina[i]) > 100 && carboplatina[i] <= 400){
 
-function validaVelcade(){
+ 		while(carboplatina[i] > 100) {
+ 		carboplatina[i] = (carboplatina[i] - 150)
+ 	 	
+ 	 	addTabela150 = addTabela150 + 1;
+ 	 	carboplatinaTd150.textContent = addTabela150;
+ 	 	console.log(carboplatina[i]);
+ 	 	
+}};
 
-if(opcoes.value == "3"){
-	velcade.push(campo.value);
-    console.log(velcade);
-    
-};
-};
- 
+if  (parseFloat(carboplatina[i]) > 0 && carboplatina[i] <= 100){
+	
+ 		while(carboplatina[i] > 0) {
+ 		carboplatina[i] = (carboplatina[i] - 50)
+ 	 	
+ 	 	addTabela50 = addTabela50 + 1;
+ 	 	carboplatinaTd50.textContent = addTabela50;
+ 	 	console.log(carboplatina[i]);
+ 	 	console.log(addTabela50);
+ 	 	
+}}}};
 
-function validaGenuxal(){
+ 	
+function somaFrascosCisplatina(){
+	
+	var totalCisplatina = 0;
+	
+	for(var i = 0; i < cisplatina.length; i++){
+ 	
+ 	totalCisplatina = parseFloat(totalCisplatina) + parseFloat(cisplatina[i]);
+ 	totalFrascosCisplatina = (totalCisplatina / 50);
+ 	totalCisplatinaTd.textContent = totalCisplatina;
+ 	 
+}};
+ 	 
 
-if(opcoes.value == "2"){
-	genuxal.push(campo.value);
-    console.log(genuxal);
-};
-};
-
-
-
-function validaVidaza(){
-
-if(opcoes.value == "1"){
-	vidaza.push(campo.value);
-    console.log(vidaza);
-};
-};
-
-function LimpaCampo() {
-  document.querySelector("#form-principal").reset();
-};
 
 //---------------------------------------------------- tabela soros
 var totalequiposimples = 0;
@@ -186,11 +139,7 @@ if(opcoesEquipo.value == 1 && opcoesSoro.value == 2){
 	totalsoro100 = totalsoro100 +1;
  	eq100simples.textContent = totalsoro100;
  	
-};
-
-
-
-}
+}};
 
 
 

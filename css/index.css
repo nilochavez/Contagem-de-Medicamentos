@@ -144,6 +144,14 @@ h1{
 	display: none;
 }
 
+#lista-soros{
+	display: none;
+}
+
+#lista-equipos{
+	display: none;
+}
+
 #labelquantidade{
 	display: none;
 }
@@ -160,17 +168,21 @@ header{
 	display: none;
 }
 
-.tabela{
+#tabela-soros{
 
-	margin: auto;
+	
 	background: white;
+	width: 25%;
+	height: 25%;
+	font-size: 15px;
 }
 
 
 table{
-	width: 100%;
+	width: 25%;
 	margin-bottom : .5em;
     table-layout: auto;
+    font size: 10px;
 
 }
 
@@ -186,5 +198,21 @@ th{
 	background-color: #EEE;
 }
 
-
 }
+
+
+.tabela-soros{
+		border:1px solid #C0C0C0;
+		border-collapse:collapse;
+		padding:5px;
+	}
+	.tabela-soros th {
+		border:1px solid #C0C0C0;
+		padding:5px;
+		background:#F0F0F0;
+		margin: auto;
+	}
+	.tabela-soros td {
+		border:1px solid #C0C0C0;
+		padding:5px;
+	}

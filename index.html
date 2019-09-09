@@ -12,7 +12,7 @@
 
 		<header>
 			<div class="container">
-				<h2 class="titulo">Aparecida Nutrição</h2>
+				<h2 class="titulo">Separação e Contagem de Medicamentos</h2>
 			</div>
 		</header>
 		<main>
@@ -51,6 +51,33 @@
 							<td class="total-vidaza">0</td>
 							<td class="frascos-vidaza">0</td>
 						</tr>
+						<tr class="Medicamento-carbo450" >
+							<td class="info-medicamento">Carboplatina</td>
+							<td class="info-quantidade">450</td>
+							<td class="total-carbo450">0</td>
+							<td class="frascos-carbo450">0</td>
+						</tr>
+
+						<tr class="Medicamento-carbo150" >
+							<td class="info-medicamento">Carboplatina</td>
+							<td class="info-quantidade">150</td>
+							<td class="total-carbo150">0</td>
+							<td class="frascos-carbo150">0</td>
+						</tr>
+
+						<tr class="Medicamento-carbo50" >
+							<td class="info-medicamento">Carboplatina</td>
+							<td class="info-quantidade">50</td>
+							<td class="total-carbo50">0</td>
+							<td class="frascos-carbo50">0</td>
+						</tr>
+
+						<tr class="Medicamento-cisplatina" >
+							<td class="info-medicamento">Cisplatina</td>
+							<td class="info-quantidade">50</td>
+							<td class="total-cisplatina">0</td>
+							<td class="frascos-cisplatina">0</td>
+						</tr>
 
 					<form name="form" id="form-principal">	
 					</tbody>
@@ -60,28 +87,10 @@
 		</main>
 
 		<section class="container">
-		    <h2 id="titulo-form">Adicionar novo paciente</h2>
-		    <table class="tabela-soros">
-					<thead>
-						
-<style>
-	.demo {
-		border:1px solid #C0C0C0;
-		border-collapse:collapse;
-		padding:5px;
-	}
-	.demo th {
-		border:1px solid #C0C0C0;
-		padding:5px;
-		background:#F0F0F0;
-		margin: auto;
-	}
-	.demo td {
-		border:1px solid #C0C0C0;
-		padding:5px;
-	}
-</style>
-<table class="demo">
+		    <h2 id="titulo-form">Lista de Soros </h2>
+
+
+<table class="tabela-soros">
 	
 	<thead>
 	<tr>
@@ -98,7 +107,7 @@
 	<tbody>
 	<tr>
 		<td>SF 50 mL</td>
-		<td id="eqsimples">sf 50 eq. simples</td>
+		<td id="eqsimples">0</td>
 		<td></td>
 		<td></td>
 		<td></td>
@@ -195,10 +204,12 @@
 
 
 <select id="lista" >
-            <option name="Selecione" value="0">Selecione</option>
+            <option name="selecione" value="0">Selecione</option>
             <option name="vidaza" value="1">Vidaza</option>
-            <option name="genuxal" value="2">genuxal</option>
+            <option name="genuxal" value="2">Genuxal</option>
             <option name="velcde" value="3">Velcade</option>
+            <option name="carboplatina" value="4">Carboplatina</option>
+            <option name="cisplatina" value="5">Cisplatina</option>
             
         </select>
 <select id="lista-soros" >
@@ -240,6 +251,7 @@
 		</section>
 
 		<script src="js/principal.js"></script>
+		<script src="js/form.js"></script>
 
 	</body>
 	</form>
